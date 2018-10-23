@@ -1,0 +1,27 @@
+@import './mixins.scss';
+
+#Homepage {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  padding: 8px;
+  height: calc(100vh - 76px);
+  .films {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    .filmOuter {
+      flex-basis: 30%;
+      margin: 5px;
+      min-width: 180px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .loader {
+    margin: auto;
+    width: 125px;
+  }
+}

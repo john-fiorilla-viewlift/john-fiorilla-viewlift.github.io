@@ -1,0 +1,8 @@
+$globalMin: 480px;
+$globalMax: 1000px;
+
+@import '~piecewisecss/piecewise';
+@import './scss/mixins';
+@import './scss/app.scss';
+@import './scss/homepage.scss';
+@import './scss/loginform.scss';

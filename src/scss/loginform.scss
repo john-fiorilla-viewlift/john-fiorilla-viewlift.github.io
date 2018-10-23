@@ -1,0 +1,59 @@
+@import './mixins.scss';
+
+#LoginPage {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+#LoginForm {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  max-width: 400px;
+  padding: 8px;
+  > *:not(:last-child) {
+    display: block;
+    margin-bottom: 10px;
+  }
+  label {
+    @include piecewise(font-size, 24, 48);
+  }
+  input {
+    @include piecewise(font-size, 24, 48);
+    padding: 6px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: 150ms ease;
+    &:focus:not(.error) {
+      border: 2px solid green;
+    }
+    &.error {
+      border: 2px solid red;
+    }
+  }
+  .errorMessage {
+    color: red;
+    @include piecewise(font-size, 18, 32);
+  }
+  button {
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid lightblue;
+    background: white;
+    padding: 4px 8px;
+    @include piecewise(font-size, 18, 32);
+    transition: 150ms ease;
+    &:not(disabled) {
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-1px);
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+  }
+}
